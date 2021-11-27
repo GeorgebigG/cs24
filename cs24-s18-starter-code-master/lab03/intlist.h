@@ -25,7 +25,6 @@ public:
     void insertFirst(int value);     // insert new first value
 
     IntList& operator=(const IntList& source); //overloaded  (NO CHANGE)
-    bool operator==(const IntList& source); //overloaded
 
 private:
 

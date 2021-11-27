@@ -16,13 +16,7 @@ void test_copyconstructor(){
         list1.append(arr[i]);
     }
 
-
     IntList list2(list1);
-
-
-    int c1 = list1.count();
-    int c2 = list2.count();
-
     assert(list1.count()== 5);
     assert(list2.count()==list1.count());
     for(int i = 0; i<5; i++){

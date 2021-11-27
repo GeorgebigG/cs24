@@ -7,7 +7,6 @@
 #include <iostream>
 using std::cout;
 
-// copy constructor
 IntList::IntList(const IntList& source) {
     first = 0;
 
