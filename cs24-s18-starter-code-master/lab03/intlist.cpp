@@ -19,6 +19,9 @@ IntList::IntList(const IntList& source) {
 
 // destructor deletes all nodes
 IntList::~IntList() {
+
+    if (first == 0) return;
+
     Node* current = first;
     Node* next = first->next;
 
@@ -104,15 +107,19 @@ void IntList::insertFirst(int value) {
 //Assignment operator should copy the list from the source
 //to this list, deleting/replacing any existing nodes
 IntList& IntList::operator=(const IntList& source){
-    IntList list;
+    this->~IntList();
+
+    this->first = 0;
+
+    // if (source.first == NULL) return *this;
 
     Node* current = source.first;
     while (current) {
-        list.append(current->info);
+        this->append(current->info);
         current = current->next;
     }
 
-    return list;
+    return *this;
 }
 
 

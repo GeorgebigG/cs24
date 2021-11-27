@@ -49,6 +49,9 @@ void test_assignmentOperator(){
     }
     list2 = list1;
 
+    int sum1 = list1.sum();
+    int sum2 = list2.sum();
+
     assert(list2.sum()==list1.sum());
 
     list1.append(100);
